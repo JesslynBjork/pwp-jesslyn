@@ -36,7 +36,10 @@ const validation = [
         .escape(),
     check("email", "Please provide a valid email")
         .isEmail(),
-    check("subject").optional().trim().escape(),
+    check("subject")
+        .optional()
+        .trim()
+        .escape(),
     check("message", "A message shorter than 2000 characters is required").trim().escape().isLength({min:1, max:2000})
 
 ]
